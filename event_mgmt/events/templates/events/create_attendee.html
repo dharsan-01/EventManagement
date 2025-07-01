@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Attendee</title></head>
+<body>
+    <h1>Add Attendee</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add</button>
+    </form>
+    <a href="{% url 'attendee_list' %}">Cancel</a>
+</body>
+</html>
